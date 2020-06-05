@@ -73,7 +73,6 @@ section{
 	height: auto;
 	flex-direction: column;
 	align-items: center;
-	/*background-color: #0C1027;*/
 	padding-top: 4px;
 	
 }
@@ -95,27 +94,26 @@ section{
 #logo{
 	width: 74%;
     height: 100%;
-    font-weight: 500;
     text-align: center;
     margin: auto;
     padding-top: 4px;
     padding-left: 103px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-right: 25px;
 }
 
 
 #logo-image{
-	display: inline-block;
     width: 8%;
     margin-top: 6px;
-    height: auto;
     padding-top: 3px;
 
 }
 
 #logo-name{
-	display: inline-block;
     color: #858dc7;
-    vertical-align: top;
     margin-top: 14px;
     width: 35%;
     text-align: left;
@@ -142,8 +140,11 @@ section{
     justify-content: center;
 }
 
+#profile-image{
+	width: 162px;
+}
 
-#profile img{
+#profile-image img{
 	width: 50px;
 	border-radius: 50%;
 }
@@ -162,11 +163,11 @@ section{
   opacity: 1; 
 }
 #bell-icon{
-	/*display: inline-block;*/
+	display: inline-block;
     color: white;
-    margin: 0px 28px;
-    vertical-align: top;
-    margin-top: 18px;
+    width: 162px;
+    text-align: center;
+    font-size: 2rem;
 }
 
 
@@ -200,6 +201,7 @@ section{
 	margin: 0px;
 	color: white;
 	font-family: monospace;
+	font-size: 0.8rem;
 }
 
 .heart{
@@ -211,14 +213,18 @@ section{
 
 .aside-playlist img{
 	position: absolute;
-	height: 50px;
-	width: 50px;
+	height: 60px;
+	width: 60px;
 	top: 0;
 	left: 0;
 }
 
 .aside-playlist:hover{
 	box-shadow: 0 0 10px 2px #74ADC8;
+}
+
+.heading-container{
+	margin-right: 30px;
 }
 
 
@@ -340,7 +346,6 @@ section{
     height: 100%;
     display: none;
     text-align: center;
-    /*vertical-align: middle;*/
     padding-top: 33px;
     font-size: x-large;
     color: white;
@@ -360,7 +365,6 @@ section{
 .song-image {
    position: absolute;
     width: 110px;
-    /* height: 95px; */
     overflow: hidden;
     left: 4px;
     top: 23px;
@@ -428,14 +432,14 @@ section{
 	color: white;
 }
 
-/*---------------------------------------Floating player for music player----------------------------------------------------------------------*/
+/*---------------------------------------Bottom music player----------------------------------------------------------------------*/
 
 #floating-div{
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 12%;
+	height: 95px;
 	background-color: #101f4c;
 	display: none;
 }
@@ -666,8 +670,47 @@ section{
 	height: 100%;
 }
 
-
 /*---------------------------------------------------------Media queries-------------------------------------------------*/
+
+@media screen and (max-width: 950px)
+{
+	#logo{
+		padding: 7px 0px 0px 0px;
+	}
+
+	#logo-image{
+		width: 50px;
+	}
+
+	#logo img{
+		width:35px;
+	}
+
+	#profile-image{
+		width: 100px;
+	}
+
+	#profile-image img{
+		width: 40px;
+		border-radius: 50%;
+	}
+
+	#bell-icon{
+		width: 100px;
+		text-align: center;
+		padding-top: 5px;
+	}
+
+	#search-span{
+		width: 100px;
+		margin-left: 25px;
+	}
+
+	#search-span input{
+		width: 110px;
+	}
+}
+
 
 @media screen and (max-width: 850px)
 {
@@ -706,50 +749,292 @@ section{
 
 @media screen and (max-width: 700px)
 {
-	#logo img{
-		width:35px;
-	}
-
 	html{
 		font-size: 10px;
 	}
 }
 
-@media screen and (max-width: 700px){
-	#profile img{
+@media screen and (max-width: 700px){     /*for header */
+	
+	
+	#logo{
+		padding: 7px 0px 0px 40px;
+	}
+
+	#logo-image{
+		width: 50px;
+	}
+
+	#logo img{
 		width:35px;
 	}
-	#bell-icon{
-		width: 35px;
+
+	#profile-image{
+		width: 80px;
 	}
+
+	#profile-image img{
+		width: 40px;
+		border-radius: 50%;
+	}
+
+	#bell-icon{
+		width: 80px;
+		text-align: center;
+		padding-top: 12px;
+	}
+
+	#search-span{
+		width: 80px;
+		margin-left: 50px;
+	}
+
 	#search-span input{
 		width: 76px;
 	}
-	#search-span{
-		margin-left: -33px;
-	}
+
 }
 
-
-
-
-@media screen and (width: 700px)
-{
-	#control-button li i{
-		margin-top: 20px;
-		 font-size: 1.5rem;
-	}
-
+@media screen and (max-width: 700px) /* for bottom music player*/
+{	
 	#control-button{
-
+		margin: -6px -21px 0px 0px;
 	}
-
+	#control-button li i{
+		font-size: 2rem;
+	}
 	#slider{
-		width: 288px;
+		padding: 0px 0px 0px 68px;
 	}
 
 	#slider input{
-		width: 155px;
+		width: 175px;
 	}
 }
 
+/*-----------------------------------------------------Thses queries are for mobile screens-------------------------------*/
+
+@media screen and (max-width: 420px)
+{
+	#logo{
+		margin:0px;
+		padding: 0px 0px 0px 47px;
+	}
+
+	#profile{
+		width: 80%;
+	}
+
+	#profile-image{
+		width: 80px;
+	}
+
+	#bell-icon{
+	width: 80px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+	}
+	
+	#logo-image{
+		width: 15%;
+	}
+	#logo-name{
+		width: 45%;
+	}
+
+	#search-span{
+		margin-left: 25px;
+	}
+
+	#control-button{
+	width: 220px;
+    margin: auto;
+    margin-top: 25px;
+    margin-right: 101px;
+	}
+
+	#control-button li i{
+		font-size: 1rem;
+	}
+
+	#player{
+		width: 313px;
+		margin-left: 88px;
+    	margin-top: -32px;
+	}
+
+	#player li i{
+	font-size: 2rem;
+	}
+
+	#slider{
+		padding: 0px 0px 0px 0px;
+    	/* margin: auto; */
+    	margin-top: -65px;
+    	margin-left: 103px;
+	}
+
+	#slider input{
+		width: 175px;
+	}
+
+	#floating-div a h3{
+		margin-right: 4px;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 380px)
+{	
+	#logo{
+		margin:0px;
+		padding: 0px 0px 0px 47px;
+	}
+
+	#profile{
+		width: 80%;
+	}
+
+	#profile-image{
+		width: 80px;
+	}
+
+	#bell-icon{
+	width: 80px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+	}
+	
+	#logo-image{
+		width: 15%;
+	}
+	#logo-name{
+		width: 45%;
+	}
+
+	#search-span{
+		margin-left: 25px;
+	}
+
+	#control-button{
+	width: 220px;
+    margin: auto;
+    margin-top: 13px;
+    margin-right: 92px;
+	}
+
+	#control-button li i{
+		font-size: 1rem;
+	}
+
+	#player{
+		width: 313px;
+		margin-left: 60px;
+    	margin-top: -36px;
+	}
+	#player li i{
+	font-size: 2rem;
+	}
+
+	#slider{
+		padding: 0px 0px 0px 0px;
+    /* margin: auto; */
+    	margin-top: -56px;
+    	margin-left: 77px;
+	}
+
+	#slider input{
+		width: 175px;
+	}
+	#floating-div a h3{
+		margin-right: 4px;
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width:370px)
+{
+	#control-button{
+		margin-right: 79px;
+	}
+}
+
+@media screen and (max-width: 330px)
+{
+	#logo{
+		margin:0px;
+		padding: 0px 0px 0px 30px;
+	}
+
+	#profile{
+		width: 80%;
+	}
+
+	#profile-image{
+		width: 80px;
+	}
+
+	#bell-icon{
+	width: 80px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+	}
+	
+	#logo-image{
+		width: 23%;
+	}
+	#logo-name{
+		width: 50%;
+	}
+
+	#search-span{
+		margin-left: 25px;
+	}
+
+	#floating-div{
+		height: 80px;
+	}
+
+	#control-button{
+	width: 220px;
+    margin: auto;
+    margin-top: 0px;
+    margin-right: 60px;
+	}
+
+	#control-button li i{
+		font-size: 1rem;
+	}
+
+	#player{
+		width: 313px;
+		margin-left: 37px;
+	}
+	#player li i{
+	font-size: 2rem;
+	}
+
+	#slider{
+		padding: 0px 0px 0px 0px;
+    	/* margin: auto; */
+    	margin-top: -56px;
+    	margin-left: 63px;
+}
+	#slider input{
+		width: 157px;
+	}
+
+	#floating-div a h3{
+		margin-right: 4px;
+		font-size: 0.8rem;
+	}
+}

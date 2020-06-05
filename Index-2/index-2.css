@@ -13,7 +13,6 @@ body{
     width: 100%;
     height: 80px;
     margin: 0px;
-    /*border: 1px solid white;*/
 }
 #header-1{
     position: fixed;
@@ -68,33 +67,28 @@ aside h2{
 /*--------------------properties for things inside header 1-------------------------------------------------------------------*/
 
 #logo{
-	width: 74%;
+    width: 74%;
     height: 100%;
-    /* padding: 6px 49px; */
-    font-weight: 500;
     text-align: center;
     margin: auto;
-    /*border: 1px solid wheat;*/
     padding-top: 4px;
     padding-left: 103px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-right: 25px;
 }
 
 
 #logo-image{
-	display: inline-block;
     width: 8%;
-    /*border: 1px solid white;*/
     margin-top: 6px;
-    height: auto;
     padding-top: 3px;
 
 }
 
 #logo-name{
-	display: inline-block;
     color: #858dc7;
-    /*border: 1px solid white;*/
-    vertical-align: top;
     margin-top: 14px;
     width: 35%;
     text-align: left;
@@ -102,10 +96,9 @@ aside h2{
 }
 
 #logo img{
-	width: 50px;
-	/*border: 1px solid white;*/
-
+    width: 50px;
 }
+
 
 /*-----------------------------------properties of thing inside header 2----------------------------------------------------------------------------------*/
 #profile{
@@ -121,8 +114,11 @@ aside h2{
     justify-content: center;
 }
 
+#profile-image{
+    width: 162px;
+}
 
-#profile img{
+#profile-image img{
     width: 50px;
     border-radius: 50%;
 }
@@ -141,11 +137,11 @@ aside h2{
   opacity: 1; 
 }
 #bell-icon{
-    /*display: inline-block;*/
+    display: inline-block;
     color: white;
-    margin: 0px 28px;
-    vertical-align: top;
-    margin-top: 18px;
+    width: 162px;
+    text-align: center;
+    font-size: 2rem;
 }
 
 
@@ -323,6 +319,7 @@ aside h2{
     margin: 0px;
     color: white;
     font-family: monospace;
+    font-size: 0.8rem;
 }
 
 .heart{
@@ -334,14 +331,18 @@ aside h2{
 
 .aside-playlist img{
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     top: 0;
     left: 0;
 }
 
 .aside-playlist:hover{
     box-shadow: 0 0 10px 2px #74ADC8;
+}
+
+.heading-container{
+    margin-right: 30px;
 }
 
 /*--------------------------------------------------dropdown-list----------------------------------------------------*/
@@ -398,6 +399,46 @@ aside h2{
 
 /*------------------------------------------------------Media queries----------------------------------------------------*/
 
+@media screen and (max-width: 950px)
+{
+    #logo{
+        padding: 7px 0px 0px 0px;
+    }
+
+    #logo-image{
+        width: 50px;
+    }
+
+    #logo img{
+        width:35px;
+    }
+
+    #profile-image{
+        width: 100px;
+    }
+
+    #profile-image img{
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    #bell-icon{
+        width: 100px;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    #search-span{
+        width: 100px;
+        margin-left: 25px;
+    }
+
+    #search-span input{
+        width: 110px;
+    }
+}
+
+
 @media screen and (max-width: 850px)
 {
     aside{
@@ -417,48 +458,192 @@ aside h2{
         justify-content: space-between;
     }
 
-.aside-playlist{
-    height: 60px;
-    width: 260px;
-    position: relative;
-    margin: 4px 14px;
-    
+    .aside-playlist{
+        height: 60px;
+        width: 260px;
+        position: relative;
+        margin: 4px 14px;
 }
 
 }
 
+@media screen and (max-width: 760px)
+{
+    #play-image{
+        display: none;
+    }
+}
 
 @media screen and (max-width: 700px)
 {
-    #logo img{
-        width:35px;
-    }
-
     html{
         font-size: 10px;
     }
 }
 
 @media screen and (max-width: 700px){
-    #profile img{
+    
+    
+    #logo{
+        padding: 7px 0px 0px 40px;
+    }
+
+    #logo-image{
+        width: 50px;
+    }
+
+    #logo img{
         width:35px;
     }
-    #bell-icon{
-        width: 35px;
+
+    #profile-image{
+        width: 80px;
     }
+
+    #profile-image img{
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    #bell-icon{
+        width: 80px;
+        text-align: center;
+        padding-top: 12px;
+    }
+
+    #search-span{
+        width: 80px;
+        margin-left: 50px;
+    }
+
     #search-span input{
         width: 76px;
     }
-    #search-span{
-        margin-left: -33px;
-    }
+
 }
 
-@media screen and (max-width: 700px)
-{
-    .template-image{
-        
-        height: 30px;
-        width: 30px;
+/*--------------------------------------------------------------Queries for mobile screen------------------------------------*/
+
+@media screen and (max-width: 420px)
+{   
+    #artist-div{
+        width: 84%;
     }
+
+    #logo{
+        margin:0px;
+        padding: 0px 0px 0px 47px;
+    }
+
+    #profile{
+        width: 80%;
+    }
+
+    #profile-image{
+        width: 80px;
+    }
+
+    #bell-icon{
+    width: 80px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+    }
+    
+    #logo-image{
+        width: 15%;
+    }
+    #logo-name{
+        width: 45%;
+    }
+
+    #search-span{
+        margin-left: 25px;
+    }
+
+}
+
+@media screen and (max-width: 380px)
+{   
+    #artist-div{
+        width: 84%;
+    }
+
+    #logo{
+        margin:0px;
+        padding: 0px 0px 0px 47px;
+    }
+
+    #profile{
+        width: 80%;
+    }
+
+    #profile-image{
+        width: 80px;
+    }
+
+    #bell-icon{
+    width: 80px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+    }
+    
+    #logo-image{
+        width: 15%;
+    }
+    #logo-name{
+        width: 45%;
+    }
+
+    #search-span{
+        margin-left: 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 330px)
+{  
+     #artist-div{
+        width: 84%;
+    }
+
+    #logo{
+        margin:0px;
+        padding: 0px 0px 0px 30px;
+    }
+
+    #profile{
+        width: 80%;
+    }
+
+    #profile-image{
+        width: 80px;
+    }
+
+    #bell-icon{
+    width: 80px;
+    padding: 0px;
+    margin: 0px;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 10px;
+    }
+    
+    #logo-image{
+        width: 23%;
+    }
+    #logo-name{
+        width: 50%;
+    }
+
+    #search-span{
+        margin-left: 25px;
+    }
+   
 }
