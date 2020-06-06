@@ -679,11 +679,11 @@ section{
 	}
 
 	#logo-image{
-		width: 50px;
+		width: 70px;
 	}
 
 	#logo img{
-		width:35px;
+		width:45px;
 	}
 
 	#profile-image{
@@ -965,11 +965,11 @@ section{
 	}
 }
 
-@media screen and (max-width: 330px)
+@media screen and (max-width:340px)
 {
 	#logo{
 		margin:0px;
-		padding: 0px 0px 0px 30px;
+		padding: 0px 0px 0px 42px;
 	}
 
 	#profile{
@@ -993,7 +993,7 @@ section{
 		width: 23%;
 	}
 	#logo-name{
-		width: 50%;
+		width: 60%;
 	}
 
 	#search-span{
@@ -1028,7 +1028,7 @@ section{
     	/* margin: auto; */
     	margin-top: -56px;
     	margin-left: 63px;
-}
+	}	
 	#slider input{
 		width: 157px;
 	}
