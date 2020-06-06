@@ -1038,3 +1038,17 @@ section{
 		font-size: 0.8rem;
 	}
 }
+
+@media screen and (max-width:290px)
+{
+	#logo{
+		margin:0px;
+		padding: 14px 0px 0px 23px;
+	}
+	#logo-image{
+		width: 30%;
+	}
+	#logo-name{
+		width: 60%;
+	}
+}
