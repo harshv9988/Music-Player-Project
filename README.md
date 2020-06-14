@@ -1,7 +1,7 @@
 # Music-Player-Project
 I have designed Front-End part of Music Player named as Social studio
 # Site Link
-https://harshv9988.github.io/Music-Player-Project/#floating-div
+https://harshv9988.github.io/Music-Player-Project/#
 ## Languages used
 I have used Html for making an structure , CSS for its styling.
 
